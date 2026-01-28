@@ -1,0 +1,153 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Alatsi';
+  scroll-behavior: auto !important;
+}
+
+body{
+  height: auto;
+  top: 0;
+  background: url(/resources/background.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.firstName{
+  color: rgba(255, 255, 255, 0.58);
+  transition: color 0.3s ease;
+  margin-left: 10px;
+}
+
+.navbar-brand:hover .firstName {
+  color: #ff3333;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  padding: 0 30px 0 0px;
+  min-width: 300px; 
+  font-size: 1.1rem;
+}
+
+.navbar.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar .btn-transparent,
+.navbar .dropdown-toggle {
+  color: #aaa;              
+  background-color: transparent;
+  border: none;
+  transition: color 0.3s ease; 
+}
+
+.navbar .btn-transparent:hover,
+.navbar .dropdown-toggle:hover {
+  color: #fff;             
+}
+
+.navbar .dropdown-menu-dark .dropdown-item {
+  color: #aaa;             
+  transition: color 0.3s ease;
+}
+
+.navbar .dropdown-menu-dark .dropdown-item:hover {
+  color: #fff;               
+  background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.dropdown-menu-dark {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  min-width: 100px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Portfolio Styles */
+.content{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.portfolioTitle{
+  color: #f3f3f3;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Portfolio Card Styles */
+.cardContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.card{
+  height: auto;
+  width: 300px;
+  flex: 0 0 25%;
+  height: 500px;
+  margin: 20px;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 500px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #161616;
+  border: #373737 1px solid;
+}
+
+.banner{
+  height: 150px !important;
+  min-height: 150px !important;
+  width: 260px;
+  margin: 20px 40px 20px 40px;
+  border-radius: 8px;
+  background-size: cover;
+}
+
+.card-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.card-title h1{
+  color: #ececec;
+  font-size: 2rem;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: scroll;
+}
+
+.card-body p{
+  font-size: 1rem;
+  color: #ececec;
+  font-weight: lighter;
+}

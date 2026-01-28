@@ -3,9 +3,11 @@ html, body {
   width: 100%;
   margin: 0;
   font-family: 'Alatsi';
+  scroll-behavior: auto !important;
 }
 
 body{
+  height: 700vh;
   top: 0;
   background: #000000;
 }
@@ -21,11 +23,8 @@ body{
 }
 
 .navbar {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 2s ease;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   padding: 0 30px 0 0px;
   min-width: 300px; 
@@ -67,8 +66,19 @@ body{
   padding: 10px 0;
   text-align: center;
 }
+.content{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
 
 .header {
+  pointer-events: none;
+  z-index: 1;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,18 +86,31 @@ body{
   margin: 0;
   height: 100%;
   width: 100%;
+  background-color: #000000;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.headerText {
+  color: #ffffff;
+  font-size: 2rem;
+  letter-spacing: 10px;
 }
 
 .viewer {
-  z-index: -1;
   margin-top: 0;
-  aspect-ratio: 40 / 7;
-  height: auto;
-  width: 50%;
+  width: 40%;
 }
 
 .scrollDown{
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -97,8 +120,8 @@ body{
 }
 
 .scrollDown p{
-  margin: 0;   
   font-size: 1.5rem;
+  letter-spacing: 2px;
   line-height: 0; 
 }
 
@@ -109,9 +132,9 @@ body{
 }
 
 .main {
-  opacity: 0;
-  transition: opacity 2s ease;
-  margin: 0;
+  pointer-events: auto;
+  position: fixed;
+  z-index: 0;
   height: 100vh;
   width: 100%;
   display: grid;
@@ -135,19 +158,21 @@ body{
 }
 
 .description {
-  margin-left: 300px;
+  display: none;
   color: #fff;
   font-size: 2rem; 
-  overflow: hidden;      
-  opacity: 0; 
+  overflow: hidden;    
+  animation: slide-in 1s ease backwards;   
+  animation-delay: 0.5s;
 }
 
 .bigText {
-  margin-left: 300px;
+  display: none;
   color: #fff;
   font-size: 5rem;
   letter-spacing: 15px;
-  opacity: 0;
+  animation: slide-in 1s ease backwards;
+  animation-delay: 0.5s;
 }
 
 .highlighted {
@@ -155,10 +180,12 @@ body{
 }
 
 .icon{
+  display: none;
   margin-right: 20px;
   outline: none;
   text-decoration: none;
-  opacity: 0;
+  animation: pop-up 1s ease backwards;
+  animation-delay: 1s;
 }
 
 .icon:hover img{
@@ -167,22 +194,30 @@ body{
 }
 
 .about {
+  padding: 50px 0 50px 0;
   height: 100vh;
-  display: none;
-  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   background-image: url("resources/background2.png");
   background-size: cover;
 }
 
+.spacer{
+  width: 50%;
+}
+
 .aboutDescription{
-  margin-left: 300px;
+  margin-left: 0;
   max-height: 500px;
   max-width: 900px;
   color: #fff;
   font-size: 1.4rem; 
-  overflow-x: hidden;   
-  opacity: 0;           
+  overflow-x: hidden;
+  animation: slide-in 1s ease backwards;   
+  animation-delay: 0.5s;              
 }
 
 @keyframes pop-up {

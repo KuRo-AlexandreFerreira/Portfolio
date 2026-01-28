@@ -8,10 +8,10 @@
   <link href='https://fonts.googleapis.com/css?family=Alatsi' rel='stylesheet'>
   <title>Alexandre Ferreira</title>
 </head>
-  <body>
+  <body id="body">
     <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-transparent">
       <div class="container-fluid">
-        <a class="navbar-brand" onclick="showHome()">
+        <a class="navbar-brand" onclick="showHome()" style="cursor: pointer;">
           <span class="firstName fw-bold name">Alexandre </span><span class="fw-bold lastName">Ferreira</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown">
@@ -30,9 +30,8 @@
                 Projects
               </a>
               <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Portfolio</a></li>
+                <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
                 <li><a class="dropdown-item" href="https://github.com/KuRo-AlexandreFerreira" target="_blank">GitHub</a></li>
-                <li><a class="dropdown-item" href="#">Blog</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown ms-4">
@@ -47,54 +46,7 @@
       </div>
   </nav>
 
-  <div class="header">
-    <canvas class="viewer" id="viewer"> </canvas>
-    <div class="scrollDown">
-      <p>Scroll Down</p>
-      <img src="resources/downarrow.svg" alt="">
-    </div>
-  </div>
-
-  <div class="main" id="main">
-    <div></div>
-    <div>
-      <p class="description"> Hello world! I'm<span class="highlighted"> Alexandre Ferreira</span>, a Full-Stack<br> Developer based in Porto, Portugal.</p> 
-      <p class="bigText">I CODE STUFF!</p>
-      <div class="buttonsCointainer">
-        <a href="https://github.com/KuRo-AlexandreFerreira" target="_blank" title="Visit my Github page!" class="icon" >
-          <img src="resources/githubLogo.png" alt="" >
-        </a>
-        <a href="https://www.linkedin.com/in/alexandreferreira-dev/" target="_blank" title="Visit my LinkedIn profile!" class="icon">
-          <img src="resources/linkedinLogo.png" alt="">
-        </a>
-        <a href="https://www.instagram.com/_alexandre.f_/" target="_blank" title="Visit my Instagram profile!" class="icon">
-          <img src="resources/instagramLogo.png" alt="">
-        </a>  
-      </div>
-    </div>
-  </div>
-  <div class="about" id="about">
-    <div></div>
-    <div>
-      <p class="aboutDescription">Hello world, I'm <span class="highlighted">Alexandre Ferreira</span> a Full-Stack Developer based in Porto, Portugal.
-      <p class="aboutDescription">I began my career in <span class="highlighted">2019</span> teaching little kids Taekwondo, imparting valuable skills like discipline and perseverance.</p> 
-      <p class="aboutDescription">As a lifetime tech geek I developed a passion for programming in my free time by creating projects in order to transform my curiosity into ability. 
-        I now devote all of my attention to software development, focusing my energies on creating solutions that have an impact.</p> 
-      <p class="aboutDescription">I can't wait to have a positive impact on the world by writing meaningful code and continuing to advance in the computer industry.</p>
-      <div class="buttonsCointainer">
-        <a href="https://github.com/KuRo-AlexandreFerreira" target="_blank" title="Visit my Github page!" class="icon" >
-          <img src="resources/githubLogo.png" alt="" >
-        </a>
-        <a href="https://www.linkedin.com/in/alexandreferreira-dev/" target="_blank" title="Visit my LinkedIn profile!" class="icon">
-          <img src="resources/linkedinLogo.png" alt="">
-        </a>
-        <a href="https://www.instagram.com/_alexandre.f_/" target="_blank" title="Visit my Instagram profile!" class="icon">
-          <img src="resources/instagramLogo.png" alt="">
-        </a>  
-      </div> 
-    </div>
-    
-  </div>
+  <div class="content" id="content">
 
   <script>
     window.history.scrollRestoration = "manual";
@@ -102,8 +54,6 @@
     window.onload = () => window.scrollTo(0, 0);
   </script>
   <script src="/js/index.js"></script>
-  <script src="/js/gsap.min.js"></script>
-  <script src="/js/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 </body>
