@@ -1,4 +1,4 @@
-function createCards(title, text, image, gif) {
+function createCards(title, text, image, videoSrc) {
 
 const cardContainer = document.querySelector('.cardContainer');
 
@@ -10,6 +10,18 @@ const banner = document.createElement('div');
 banner.className = 'banner';
 banner.style.backgroundImage = 'url("' + image + '")';
 card.appendChild(banner);
+
+const video = document.createElement('video');
+video.className = 'bannerVideo';
+video.muted = true;
+video.loop = true;
+video.playsInline = true;
+video.style.height = "150px";
+video.style.objectFit = "cover";
+video.style.width = "100%";
+video.style.borderRadius = "8px";
+video.preload = 'metadata';
+banner.appendChild(video);
 
 const cardTitle = document.createElement('div');
 cardTitle.className = 'card-title';
@@ -27,16 +39,31 @@ const bodyText = document.createElement('p');
 bodyText.textContent = text;
 cardBody.appendChild(bodyText);
 
+let hasLoaded = false;
+
 banner.addEventListener('mouseover', () => {
   banner.style.transform = 'scale(1.05)';
-  banner.style.backgroundImage = 'url("' + gif + '")';
   banner.style.transition = 'transform 0.3s ease';
+
+  if(!hasLoaded){
+    video.src = videoSrc;
+    video.load;
+    hasLoaded = true;
+    video.currentTime = 0;
+    
+  }
+
+  video.play();
+  video.style.opacity = '1';
 });  
 
 banner.addEventListener('mouseout', () => {
   banner.style.transform = 'scale(1)';
   banner.style.transition = 'transform 0.3s ease';
   banner.style.backgroundImage = 'url("' + image + '")';
+
+  video.pause();
+  video.style.opacity = '0';
 });
 }
 

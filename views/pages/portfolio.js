@@ -17,7 +17,7 @@ export default function render(){
           project.title,
           project.text,
           project.image,
-          project.gif
+          project.videoSrc
         )
     });
 

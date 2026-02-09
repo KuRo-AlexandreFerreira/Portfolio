@@ -94,13 +94,26 @@
 }
 
 .banner{
+  flex-shrink: 0;     
+  position: relative;
+  overflow: hidden;
   height: 150px !important;
-  min-height: 150px !important;
-  width: 260px;
+  width: 100%;
   margin: 20px 40px 20px 40px;
   border-radius: 8px;
   background-size: cover;
   background-position: center;
+}
+
+.bannerVideo {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  object-fit: cover;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
 }
 
 .card-title{
@@ -131,3 +144,4 @@
   font-size: 1rem;
   color: #ffffff;
 }
+
