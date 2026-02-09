@@ -55,7 +55,7 @@ export function createNavbar(){
                       <a href="https://www.linkedin.com/in/alexandreferreira-dev/" target="_blank" class="inline-flex items-center justify-center w-full p-2 text-white hover:bg-neutral-800 rounded">LinkedIn</a>
                     </li>
                     <li>
-                      <a href="/resources/AlexandreFerreiraCV.pdf" class="inline-flex items-center justify-center w-full p-2 text-white hover:bg-neutral-800 rounded">CV</a>
+                      <a href="https://alexandreferreira.dev/resources/AlexandreFerreiraCV.pdf" class="inline-flex items-center justify-center w-full p-2 text-white hover:bg-neutral-800 rounded">CV</a>
                     </li>
                   </ul>
               </div>
