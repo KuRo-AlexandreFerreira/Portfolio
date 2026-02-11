@@ -1,4 +1,4 @@
-function createCards(title, text, image, videoSrc) {
+function createCards(title, text, image, videoSrc, githubLink) {
 
 const cardContainer = document.querySelector('.cardContainer');
 
@@ -9,6 +9,9 @@ cardContainer.appendChild(card);
 const banner = document.createElement('div');
 banner.className = 'banner';
 banner.style.backgroundImage = 'url("' + image + '")';
+banner.addEventListener('click', () => {
+  window.open(githubLink, '_blank');
+});
 card.appendChild(banner);
 
 const video = document.createElement('video');
