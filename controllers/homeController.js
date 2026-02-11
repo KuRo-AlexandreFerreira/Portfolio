@@ -4,7 +4,7 @@ export function init() {
     const app = document.getElementById("app");
 
     if (app.classList.contains("h-auto")){
-        app.classList.replace("h-auto", "h-1500")
+        app.classList.replace("h-auto", "h-1100")
     }
 
     render();
