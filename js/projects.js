@@ -11,7 +11,6 @@ const projects = [
     text: "A java based Web-App that simulates a basic banking system with customer management, account management, transaction history, and other features. For the back-end I decided to use REST API, Spring Boot framework, and a PostgreSQL database to store user data securely. On the front-end side, HTML, CSS, and JavaScript are used to create an intuitive and dynamic UI.",
     image: "resources/javabank_banner.jpg",
     videoSrc: "resources/Javabank.webm",
-    githubLink: "#"
   },
   {
     title: "Bender",

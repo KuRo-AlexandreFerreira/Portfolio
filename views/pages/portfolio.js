@@ -17,7 +17,8 @@ export default function render(){
           project.title,
           project.text,
           project.image,
-          project.videoSrc
+          project.videoSrc,
+          project.githubLink
         )
     });
 

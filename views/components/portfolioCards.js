@@ -10,6 +10,7 @@ const banner = document.createElement('div');
 banner.className = 'banner';
 banner.style.backgroundImage = 'url("' + image + '")';
 banner.addEventListener('click', () => {
+  if (!githubLink) return;
   window.open(githubLink, '_blank');
 });
 card.appendChild(banner);
